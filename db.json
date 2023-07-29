@@ -1,0 +1,254 @@
+{
+  "books": [
+    {
+      "title": "Гарри Поттер и философский камень",
+      "desc": "Книга о молодом волшебнике и его первом годе обучения в Хогвартсе.",
+      "category": "Фэнтези",
+      "price": 499,
+      "image": "https://img4.labirint.ru/rc/dc5ac469aa386ba6ff0767521b09ac7f/363x561q80/books43/424618/cover.jpg?1670073957",
+      "id": 1
+    },
+    {
+      "title": "Мастер и Маргарита",
+      "desc": "Роман о визите дьявола в Москву и сатирической истории Иешуа Га-Ноцри.",
+      "category": "Классика",
+      "price": 599,
+      "image": "https://img4.labirint.ru/rc/c5c21cc6bb7a1e58e7ae5c058c4a9d75/363x561q80/books71/705242/cover.jpg?1564210842",
+      "id": 2
+    },
+    {
+      "title": "Преступление и наказание",
+      "desc": "Роман о студенте Раскольникове, который совершает преступление.",
+      "category": "Классика",
+      "price": 459,
+      "image": "https://cdn.azbooka.ru/cv/w1100/a915208d-9e3a-4293-beb9-06d77344f3d5.jpg",
+      "id": 3
+    },
+    {
+      "title": "Анна Каренина",
+      "desc": "Роман о любви и семейных отношениях в России 19 века.",
+      "category": "Классика",
+      "price": 549,
+      "image": "https://cdn.eksmo.ru/v2/430000000000145684/COVER/cover1__w600.jpg",
+      "id": 4
+    },
+    {
+      "title": "451° по Фаренгейту",
+      "desc": "Антиутопический роман об обществе, где книги запрещены.",
+      "category": "Научная фантастика",
+      "price": 389,
+      "image": "https://www.moscowbooks.ru/image/book/674/orig/i674139.jpg?cu=20191004161517",
+      "id": 5
+    },
+    {
+      "title": "Маленький принц",
+      "desc": "Философская сказка о маленьком принце, путешествующем по планетам.",
+      "category": "Сказка",
+      "price": 299,
+      "image": "https://www.moscowbooks.ru/image/book/745/orig/i745693.jpg?cu=20220309182511",
+      "id": 6
+    },
+    {
+      "title": "Война и мир",
+      "desc": "Эпический роман о событиях во время войн против Наполеона.",
+      "category": "Классика",
+      "price": 999,
+      "image": "https://www.moscowbooks.ru/image/book/741/orig/i741097.jpg?cu=20220117094508",
+      "id": 7
+    },
+    {
+      "title": "Алиса в стране чудес",
+      "desc": "Сказочный роман об Алисе, попавшей в удивительный мир.",
+      "category": "Сказка",
+      "price": 329,
+      "image": "https://www.moscowbooks.ru/image/book/720/orig/i720889.jpg?cu=20210525164602",
+      "id": 8
+    },
+    {
+      "title": "Дневник Анны Франк",
+      "desc": "Автобиографический рассказ девочки-еврейки, скрывающейся от нацистов.",
+      "category": "Биография",
+      "price": 449,
+      "image": "https://www.mann-ivanov-ferber.ru/assets/images/covers/72/20572/1.00x-thumb.png",
+      "id": 9
+    },
+    {
+      "title": "Головокружение",
+      "desc": "Роман о страсти, любви и человеческих отношениях.",
+      "category": "Любовный роман",
+      "price": 299,
+      "image": "https://ir.ozone.ru/s3/multimedia-8/c1000/6375927380.jpg",
+      "id": 10
+    },
+    {
+      "title": "О дивный новый мир",
+      "desc": "Антиутопический роман о будущем обществе, где научные достижения и контроль над личностью приводят к утрате свободы.",
+      "category": "Научная фантастика",
+      "price": 439,
+      "image": "https://fantlab.ru/images/editions/big/12155",
+      "id": 11
+    },
+    {
+      "title": "Гамлет",
+      "desc": "Трагедия о принце Датском, жаждущем мести за убийство отца.",
+      "category": "Классика",
+      "price": 499,
+      "image": "https://img4.labirint.ru/rc/75568dcf624c0e8c79ab9b5326f11076/363x561q80/books65/640776/cover.jpg?1613035902",
+      "id": 12
+    },
+    {
+      "title": "Дубровский",
+      "desc": "Роман о благородном разбойнике, стремящемся отомстить за обиды.",
+      "category": "Классика",
+      "price": 379,
+      "image": "https://img3.labirint.ru/rc/9fb47318b89a2cf962d0f12201362ae8/363x561q80/books23/223035/cover.jpg?1563565252",
+      "id": 13
+    },
+    {
+      "title": "Атлант расправил плечи",
+      "desc": "Философский роман о мире, который начинает разваливаться.",
+      "category": "Философия",
+      "price": 749,
+      "image": "https://bibliomo.ru/upload/opacembed/5ab/_-_.1.jpeg",
+      "id": 14
+    },
+    {
+      "title": "Мартин Иден",
+      "desc": "Роман о стремлении простого человека стать писателем и добиться признания.",
+      "category": "Художественная литература",
+      "price": 489,
+      "image": "https://img3.labirint.ru/rc/d8a0ad82f2881a800f4683cec269b1eb/363x561q80/books27/267589/cover.jpg?1297085296",
+      "id": 15
+    },
+    {
+      "title": "Сила подсознания",
+      "desc": "Книга о том, как использовать свою подсознательную силу для достижения успеха.",
+      "category": "Саморазвитие",
+      "price": 299,
+      "image": "https://bookhouse.kg/media/galleryphoto/2019/7/1d1f37ec-8dbe-47d0-af87-23862a56cf12.jpg.600x780_q94.jpg",
+      "id": 16
+    },
+    {
+      "title": "7 навыков высокоэффективных людей",
+      "desc": "Классическое руководство по развитию личности и достижению успеха.",
+      "category": "Саморазвитие",
+      "price": 459,
+      "image": "https://upload.wikimedia.org/wikipedia/ru/0/0c/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8_%22%D0%A1%D0%B5%D0%BC%D1%8C_%D0%BD%D0%B0%D0%B2%D1%8B%D0%BA%D0%BE%D0%B2_%D0%B2%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D1%8D%D1%84%D1%84%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D1%85_%D0%BB%D1%8E%D0%B4%D0%B5%D0%B9%22.jpg",
+      "id": 17
+    },
+    {
+      "title": "Властелин колец",
+      "desc": "Эпическая фэнтези-трилогия о приключениях в Средиземье.",
+      "category": "Фэнтези",
+      "price": 799,
+      "image": "https://img4.labirint.ru/rc/1b253329aceb87812dc132b397d2c754/363x561q80/books19/185950/cover.jpg?1280394613",
+      "id": 18
+    },
+    {
+      "title": "Процесс",
+      "desc": "Роман о трагической судьбе человека, ставшего жертвой системы.",
+      "category": "Классика",
+      "price": 379,
+      "image": "https://eksmoast.by/upload/iblock/8a1/nf16pvxoafm1t0ahzub3vpzqm7gjrv2u.jpg",
+      "id": 19
+    },
+    {
+      "title": "Три товарища",
+      "desc": "Роман о дружбе, любви и потерях во время Первой мировой войны и Великой депрессии.",
+      "category": "Художественная литература",
+      "price": 429,
+      "image": "https://img4.labirint.ru/rc/06fb67b942160fde281e4506cf38b866/363x561q80/books77/762328/cover.jpg?1598257573",
+      "id": 20
+    },
+    {
+      "title": "Мир войны Z",
+      "desc": "Постапокалиптический роман о выживании в мире, охваченном эпидемией зомби.",
+      "category": "Хоррор",
+      "price": 359,
+      "image": "https://img4.labirint.ru/rc/0d01c8e5ce356bf1ccf87b1d895a0c18/363x561q80/books40/396844/cover.jpg?1563720030",
+      "id": 21
+    },
+    {
+      "title": "Космическая одиссея 2001 года",
+      "desc": "Научно-фантастический роман о загадочном монолите и космическом путешествии.",
+      "category": "Научная фантастика",
+      "price": 589,
+      "image": "https://img4.labirint.ru/rc/3ddf4210c4547d1db7bc3636aec403e0/363x561q80/books66/651124/cover.jpg?1618226748",
+      "id": 22
+    },
+    {
+      "title": "Звёздный десант",
+      "desc": "Научно-фантастический роман о противостоянии человечества и инопланетных нашественников.",
+      "category": "Научная фантастика",
+      "price": 399,
+      "image": "https://img4.labirint.ru/rc/4854aa56e44d903440dbc12fe679fe10/363x561q80/books37/360410/cover.jpg?1350131240",
+      "id": 23
+    },
+    {
+      "title": "Игра Эндера",
+      "desc": "Научно-фантастический роман о детском гениальном командире в космических сражениях.",
+      "category": "Научная фантастика",
+      "price": 459,
+      "image": "https://img3.labirint.ru/rc/0e1414b85ccfc9686c7ba698e8b04275/363x561q80/books92/918387/cover.jpg?1671006369",
+      "id": 24
+    },
+    {
+      "title": "Илон Маск: Тесла, SpaceX и дорога в будущее",
+      "desc": "Биография Илона Маска и его вклад в исследование космоса и электрических автомобилей.",
+      "category": "Биография",
+      "price": 499,
+      "image": "https://img3.labirint.ru/rc/bd1ef3ac1fd2275929a5a3737734533d/363x561q80/books51/506527/cover.jpg?1447061152",
+      "id": 25
+    },
+    {
+      "title": "Великий Гэтсби",
+      "desc": "Роман о загадочном миллионере Джей Гэтсби и его несбыточной любви к женщине из прошлого.",
+      "category": "Художественная литература",
+      "price": 429,
+      "image": "https://img3.labirint.ru/rc/631dc794386b0b76e54b9339a06c8ee7/363x561q80/books48/476419/cover.jpg?1612675790",
+      "id": 26
+    }
+  ],
+  "users": [
+    {
+      "name": "m",
+      "age": "12",
+      "email": "sdalf;jk@ema.com",
+      "password": "1",
+      "id": 1,
+      "isAdmin": true
+    },
+    {
+      "name": "2",
+      "age": "12",
+      "email": "sdalf;jk@ema.com",
+      "password": "2",
+      "id": 1,
+      "isAdmin": true
+    },
+    {
+      "name": "1",
+      "age": "1",
+      "email": "1",
+      "password": "1",
+      "isAdmin": false,
+      "id": 2
+    },
+    {
+      "name": "ada",
+      "age": "12",
+      "email": "dsf@mail.ru",
+      "password": "2",
+      "isAdmin": true,
+      "id": 3
+    },
+    {
+      "name": "qwerty",
+      "age": "12",
+      "email": "ada@mail.com",
+      "password": "12345",
+      "isAdmin": false,
+      "id": 4
+    }
+  ]
+}

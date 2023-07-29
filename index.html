@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Book Project</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <!-- ! navbar -->
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">BookLib📖</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="#"
+                                >Home</a
+                            >
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Category
+                            </a>
+                            <ul class="dropdown-menu"></ul>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="#"
+                                id="registerUser-modal"
+                                data-bs-toggle="modal"
+                                data-bs-target="#register-modal"
+                                >Register</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="#"
+                                id="registerAdmin-modal"
+                                data-bs-toggle="modal"
+                                data-bs-target="#register-admin-modal"
+                                >Add Admin</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="#"
+                                id="loginUser-modal"
+                                data-bs-toggle="modal"
+                                data-bs-target="#login-modal"
+                                >Login</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="#"
+                                id="logoutUser-btn"
+                                >Logout</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" id="showUsername"
+                                >No user</a
+                            >
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                            id="search-inp"
+                        />
+                        <button
+                            class="btn btn-outline-success"
+                            type="button"
+                            id="search-btn"
+                        >
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="w-100" id="fl"></div>
+
+        <!-- admin panel -->
+        <div class="w-100 justify-content-center text-center text-light">
+            <div class="mt-5 d-flex flex-column w-100" id="admin-panel">
+                <h2>Admin panel</h2>
+
+                <input
+                    type="text"
+                    placeholder="Title"
+                    class="mb-2 w-50 m-auto"
+                    id="book-title"
+                />
+
+                <input
+                    type="number"
+                    placeholder="Price"
+                    class="mb-2 w-50 m-auto"
+                    id="book-price"
+                />
+
+                <input
+                    type="text"
+                    placeholder="Description"
+                    class="mb-2 w-50 m-auto"
+                    id="book-desc"
+                />
+
+                <input
+                    type="url"
+                    placeholder="Image url"
+                    class="mb-2 w-50 m-auto"
+                    id="book-image"
+                />
+
+                <input
+                    type="text"
+                    placeholder="Category"
+                    class="mb-2 w-50 m-auto"
+                    id="book-category"
+                />
+
+                <button class="btn btn-dark w-50 m-auto add-book-btn">
+                    Add Book
+                </button>
+                <button class="btn btn-dark w-50 m-auto save-changes-btn">
+                    Save Changes
+                </button>
+            </div>
+        </div>
+
+        <!-- ! register modal -->
+        <div
+            class="modal fade"
+            id="register-modal"
+            tabindex="-1"
+            aria-labelledby="registerModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="registerModalLabel">
+                            REGISTER
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <input
+                            class="mb-2 w-100 form-control"
+                            type="text"
+                            placeholder="Name"
+                            id="reg-name"
+                        />
+
+                        <input
+                            class="mb-2 w-100 form-control"
+                            type="number"
+                            placeholder="Age"
+                            id="reg-age"
+                        />
+
+                        <input
+                            class="mb-2 w-100 form-control"
+                            type="email"
+                            placeholder="Email"
+                            id="reg-email"
+                        />
+
+                        <input
+                            class="mb-2 w-100 form-control"
+                            type="password"
+                            placeholder="Password"
+                            id="reg-password"
+                        />
+
+                        <input
+                            class="mb-2 w-100 form-control"
+                            type="password"
+                            placeholder="Confirm Password"
+                            id="reg-password-confirm"
+                        />
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                            id="register-modal-btn"
+                        >
+                            Register
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ! register admin modal -->
+        <div
+            class="modal fade"
+            id="register-admin-modal"
+            tabindex="-1"
+            aria-labelledby="registerModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h1
+                            class="modal-title fs-5"
+                            id="registerAdminModalLabel"
+                        >
+                            REGISTER NEW ADMIN
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <input
+                            class="mb-2 w-100 form-control"
+                            type="text"
+                            placeholder="Name"
+                            id="reg-admin-name"
+                        />
+
+                        <input
+                            class="mb-2 w-100 form-control"
+                            type="number"
+                            placeholder="Age"
+                            id="reg-admin-age"
+                        />
+
+                        <input
+                            class="mb-2 w-100 form-control"
+                            type="email"
+                            placeholder="Email"
+                            id="reg-admin-email"
+                        />
+
+                        <input
+                            class="mb-2 w-100 form-control"
+                            type="password"
+                            placeholder="Password"
+                            id="reg-admin-password"
+                        />
+
+                        <input
+                            class="mb-2 w-100 form-control"
+                            type="password"
+                            placeholder="Confirm Password"
+                            id="reg-admin-password-confirm"
+                        />
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                            id="register-admin-modal-btn"
+                        >
+                            Register
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ! login modal -->
+
+        <div
+            class="modal fade"
+            id="login-modal"
+            tabindex="-1"
+            aria-labelledby="loginModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="loginModalLabel">
+                            LOGIN
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <input
+                            class="mb-2 w-100 form-control"
+                            type="text"
+                            placeholder="Name"
+                            id="login-name"
+                        />
+
+                        <input
+                            class="mb-2 w-100 form-control"
+                            type="text"
+                            placeholder="Password"
+                            id="login-password"
+                        />
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                            id="login-modal-btn"
+                        >
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ! header -->
+
+        <header>
+            <div class="w-100 justify-content-center text-center">
+                <h1>Добро пожаловь в библиотеку BookLib!</h1>
+                <h2 class="header__div2_p">
+                    Здесь вы можете найти свои любимые книги!!
+                </h2>
+            </div>
+
+            <div class="header__div2">
+                <button id="push-btn">PUSH TO DB</button>
+                <button id="get-btn">GET BOOKS FROM DB</button>
+            </div>
+        </header>
+
+        <!-- ! content -->
+        <div
+            id="content__div"
+            class="d-flex flex-wrap justify-content-center"
+        ></div>
+        <!-- ! pagination -->
+        <div class="d-flex w-100 justify-content-center">
+            <a
+                class="btn btn-dark m-1"
+                href="#"
+                aria-label="Previous"
+                id="prev-page-btn"
+            >
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+            <a
+                class="btn btn-dark m-1"
+                href="#"
+                aria-label="Next"
+                id="next-page-btn"
+            >
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
