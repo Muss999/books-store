@@ -210,6 +210,7 @@ let logoutUserBtn = document.querySelector("#logoutUser-btn");
 
 let searchInp = document.querySelector("#search-inp");
 let searchForm = document.querySelector("form");
+let searchBtn = document.querySelector("#search-btn");
 
 //* admin reg connect
 let regAdminNameInp = document.querySelector("#reg-admin-name");
@@ -480,6 +481,8 @@ async function loginUserFunc() {
     checkLoginLoogoutStatus();
     //* ОЧИСТКА ИНПУТОВ
     cleanLogInps();
+
+    render();
 }
 
 loginBtn.addEventListener("click", loginUserFunc);
@@ -512,43 +515,60 @@ async function render() {
     //* ЗДЕСЬ ПЕРЕБИРАЕМ И ОТПРАВЛЯЕМ НА СТРАНИЦУ ВСЕ ЭЛЕМЕНТЫ ИЗ БД
     data.forEach((book) => {
         contentDiv.innerHTML += `
-        <div class="card mb-3 m-3" style="max-width: 540px; width: 40%;" id="card-div">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img
-                            src="${book.image}"
-                            class="img-fluid rounded-start"
-                            alt="eror"
-                            style="height: 260px; width: 200px"
-
-                        />
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">${book.title}</h5>
-                            <p class="card-text">Описание:<br> ${book.desc}</p>
-                            <p class="card-text">Жанр: ${book.category}</p>
-                            <p class="card-text">Стоимость: ${
-                                book.price
-                            } рублей</p>
-                            ${
-                                checkUserForBookCreate()
-                                    ? `<a href="#" class="btn btn-dark btn-edit" id="edit-${book.id}">EDIT</a>
-                                <a href="#" class="btn btn-danger btn-delete" id="del-${book.id}">DELETE</a>`
-                                    : ""
-                            }
-                        </div>
-                    </div>
-                </div>
+        <div class="card mb-3" style="width: 20%;" id="content-card">
+            <img src="${
+                book.image
+            }" class="card-img-top" alt="..." height = "450"/>
+            <button type="button" class="btn btn-success w-100 moreInfoCardBtn" id="book-${
+                book.id
+            }" >Подробнее</button>
+            <div class="card-body" id="card-body">
+                ${
+                    checkUserForBookCreate()
+                        ? `<a
+                    href="#"
+                    class="btn btn-primary btn-edit admin-btns-dd"
+                    id="edit-${book.id}"
+                    >EDIT</a
+                >
+                <a
+                    href="#"
+                    class="btn btn-danger btn-delete admin-btns-dd"
+                    id="del-${book.id}"
+                    >DELETE</a
+                >`
+                        : ""
+                }
             </div>
+        </div>
         `;
     });
+    if (data.length === 0) return;
+
     addDeleteEvent();
     addEditEvent();
     addCategoryToDropdownMenu();
+    addMoreEvent();
 }
 render();
 
+//! moreInfo about book
+
+function callAll() {}
+async function moreInfoAboutBook(e) {
+    let bookId = e.currentTarget.id.split("-")[1];
+    let res = await fetch(`${BOOKS_API}/${bookId}`);
+    let bookObj = await res.json();
+    alert(
+        `Название: ${bookObj.title}\n\nОписание: ${bookObj.desc}\n\nЖанр: ${bookObj.category}\n\nЦена: ${bookObj.price} рублей`
+    );
+}
+function addMoreEvent() {
+    let moreInfoCardBtns = document.querySelectorAll(".moreInfoCardBtn");
+    moreInfoCardBtns.forEach((btn) =>
+        btn.addEventListener("click", moreInfoAboutBook)
+    );
+}
 // product logic
 function checkUserForBookCreate() {
     let user = JSON.parse(localStorage.getItem("user"));
@@ -725,6 +745,11 @@ function addClickEventOnDropdownItem() {
 
 //! search
 searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    search = searchInp.value;
+    render();
+});
+searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
     search = searchInp.value;
     render();

@@ -4,7 +4,13 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Book Project</title>
+        <title>BookLib📖</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap"
+            rel="stylesheet"
+        />
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -39,7 +45,18 @@
                                 class="nav-link active"
                                 aria-current="page"
                                 href="#"
+                                id="home-nav"
+                                style="color: lightblue"
                                 >Home</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="./aboutUs.html"
+                                id="about-us"
+                                >About Us</a
                             >
                         </li>
                         <li class="nav-item dropdown">
@@ -123,50 +140,50 @@
         </nav>
         <div class="w-100" id="fl"></div>
 
-        <!-- admin panel -->
+        <!-- !admin panel -->
         <div class="w-100 justify-content-center text-center text-light">
-            <div class="mt-5 d-flex flex-column w-100" id="admin-panel">
+            <div class="mt-5 d-flex flex-column w-100 mb-5" id="admin-panel">
                 <h2>Admin panel</h2>
 
                 <input
                     type="text"
                     placeholder="Title"
-                    class="mb-2 w-50 m-auto"
+                    class="mb-2 w-50 m-auto admin-panel-inputs"
                     id="book-title"
                 />
 
                 <input
                     type="number"
                     placeholder="Price"
-                    class="mb-2 w-50 m-auto"
+                    class="mb-2 w-50 m-auto admin-panel-inputs"
                     id="book-price"
                 />
 
                 <input
                     type="text"
                     placeholder="Description"
-                    class="mb-2 w-50 m-auto"
+                    class="mb-2 w-50 m-auto admin-panel-inputs"
                     id="book-desc"
                 />
 
                 <input
                     type="url"
                     placeholder="Image url"
-                    class="mb-2 w-50 m-auto"
+                    class="mb-2 w-50 m-auto admin-panel-inputs"
                     id="book-image"
                 />
 
                 <input
                     type="text"
                     placeholder="Category"
-                    class="mb-2 w-50 m-auto"
+                    class="mb-2 w-50 m-auto admin-panel-inputs"
                     id="book-category"
                 />
 
-                <button class="btn btn-dark w-50 m-auto add-book-btn">
+                <button class="btn btn-success w-50 m-auto add-book-btn">
                     Add Book
                 </button>
-                <button class="btn btn-dark w-50 m-auto save-changes-btn">
+                <button class="btn btn-success w-50 m-auto save-changes-btn">
                     Save Changes
                 </button>
             </div>
@@ -366,28 +383,35 @@
                 </div>
             </div>
         </div>
-
         <!-- ! header -->
 
         <header>
-            <div class="w-100 justify-content-center text-center">
-                <h1>Добро пожаловь в библиотеку BookLib!</h1>
+            <div class="justify-content-center text-center mb-4 header__div2">
+                <h1 class="mb-4">Добро пожаловь в библиотеку BookLib!</h1>
                 <h2 class="header__div2_p">
                     Здесь вы можете найти свои любимые книги!!
                 </h2>
+                <p class="header__div2_p">
+                    Знание, мудрость и удовольствие – все это можно найти в мире
+                    книг. Наш интернет-магазин предлагает широкий ассортимент
+                    книг на любой вкус и интерес. От классической литературы до
+                    захватывающих детективов, у нас вы найдете книги для души и
+                    ума.
+                </p>
             </div>
-
-            <div class="header__div2">
-                <button id="push-btn">PUSH TO DB</button>
-                <button id="get-btn">GET BOOKS FROM DB</button>
+            <div id="jj1">
+                <button id="push-btn" class="headerBTNS">PUSH TO DB</button>
+                <button id="get-btn" class="headerBTNS">
+                    GET BOOKS FROM DB
+                </button>
             </div>
         </header>
-
         <!-- ! content -->
         <div
             id="content__div"
             class="d-flex flex-wrap justify-content-center"
         ></div>
+
         <!-- ! pagination -->
         <div class="d-flex w-100 justify-content-center">
             <a
@@ -407,6 +431,57 @@
                 <span aria-hidden="true">&raquo;</span>
             </a>
         </div>
+
+        <!-- footer start -->
+        <footer id="contact" class="footer">
+            <div class="footer__block_input">
+                <form class="footer__form_input">
+                    <input
+                        class="footer__input"
+                        type="text"
+                        placeholder="Write your name"
+                    />
+                    <input
+                        class="footer__input"
+                        type="email"
+                        placeholder="Write your email"
+                    />
+                    <input
+                        class="footer__input"
+                        type="text"
+                        placeholder="Write your description"
+                    />
+                    <button class="footer__btn">Отправить сообщение</button>
+                </form>
+            </div>
+            <div class="footer__block_map">
+                <iframe
+                    class="footer__map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1039.5246538925312!2d74.58672409133383!3d42.8714521815859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec8241b52669f%3A0xb8b43841ad54c50b!2zMjkg0YPQu9C40YbQsCDQotCw0LHRi9GI0LDQu9C40LXQstCwLCDQkdC40YjQutC10Lo!5e1!3m2!1sru!2skg!4v1686817361117!5m2!1sru!2skg"
+                    width="400"
+                    height="300"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+            <div class="footer__block_contacts">
+                <ul class="footer__contact_list">
+                    <li class="footer__contact_item">
+                        <strong>My number: </strong> + (996) 765 125 447
+                    </li>
+                    <li class="footer__contact_item">
+                        <strong>My email: </strong>muss_999@mail.ru
+                    </li>
+                    <li class="footer__contact_item">
+                        <strong>My address: </strong>Табышалиева 29
+                    </li>
+                    <li class="footer__contact_item"></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- footer end -->
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
